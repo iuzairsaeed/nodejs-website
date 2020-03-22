@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/uzairlive/nodejs-firstProject/issues"
   },
-  "homepage": "https://github.com/uzairlive/nodejs-firstProject#readme"
+  "homepage": "https://github.com/uzairlive/nodejs-firstProject#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
 }
