@@ -1,10 +1,11 @@
+// Core modules
 const http = require('http');
 
-const server = http.createServer((req, res) => {
-    // console.log(req.url, req.method, req.headers);
-    // // process.exit();
-    // const url = req.url;
-    // const method = req.method;
-});
+// custom modules / files
+const routes = require('./routes')
+
+
+console.log(routes.someText);
+const server = http.createServer(routes.handler);
 
 server.listen(3000)
