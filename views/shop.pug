@@ -3,7 +3,7 @@ html(lang="en")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title My Shop
+        title #{docTitle}
         link(rel="stylesheet", href="/css/main.css")
         link(rel="stylesheet", href="/css/product.css")
     body
@@ -14,3 +14,20 @@ html(lang="en")
                         a.active(href="/") Shop
                     li.main-header__item
                         a(href="/admin/add-product") Add Product
+    
+        main
+            if prods.length > 0 
+                .grid
+                    each product in prods
+                        article.card.product-item
+                            header.card__header
+                                h1.product__title #{product.title}
+                            div.card__image
+                                img(src="https://images.unsplash.com/photo-1527554677374-236d3bc88a34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80")
+                            div.card__content
+                                h2.product__price $19.29
+                                p.product__description A very interesting book with many life lesson with so many solution
+                            .card__actions
+                                button.btn Add to Cart
+            else
+                h1 No products
