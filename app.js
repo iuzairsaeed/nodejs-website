@@ -7,22 +7,23 @@ const path = require("path");
 
 const express = require("express");
 const bodyParser = require("body-parser");
-const expressHbs = require("express-handlebars");
+// const expressHbs = require("express-handlebars");
 
 const rootDir = require("./util/path");
 
 const app = express();
 
-app.engine(
-    "hbs",
-    expressHbs({
-        layoutsDir: "views/layouts/",
-        defaultLayout: "main-layout",
-        extname: "hbs"
-    })
-);
-app.set("view engine", "hbs");
+// app.engine(
+//     "hbs",
+//     expressHbs({
+//         layoutsDir: "views/layouts/",
+//         defaultLayout: "main-layout",
+//         extname: "hbs"
+//     })
+// );
 
+app.set("view engine", "ejs");
+// app.set("view engine", "hbs");
 // app.set("view engine", "pug");
 app.set("views", "views");
 
